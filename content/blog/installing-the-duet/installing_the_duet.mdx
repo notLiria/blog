@@ -1,0 +1,44 @@
+---
+title: Installing the Duet
+date: "2020-07-18"
+description: Setting up the Duet with Alice
+tags: 
+   - Duet
+   - RepRapFirmware
+   - Alice
+---
+
+
+Installing the duet was a pretty painless process - going from the SKR Mini E3 2.0 to the Duet was basically just a straight recrimping of the pins. All the motors worked the same way too, with the exception of the extruder stepper which I had to reverse the direction on.
+
+
+
+One thing though - I managed to fry all of the fan outputs on my duet clone within a n hour of setting it up.
+
+Whoops. 
+
+It was my fault though, really - I had soldered on two female JST connectors to the fan wires to plug my fans in on the effector side, but I had forgotten to tape them up to insulate them. Whoops. Then they touched each other. Double whoops. And for some reason on this clone they shorted each other out. 
+
+Luckily you can actually desolder the mosfets relatively easily.  
+
+
+
+Oh, right, installing the Trianglelabs Piezo20 clone was quite easy - running the cables was a bit annoying, and it seems that even just the cables shaking a little bit will cause it to trigger. Surprising, and annoying. On the other hand, repeatability is great - when it works anyways. You do have to get it down to about 5mm before you probe, and I'm finding that 450mm/min is the sweetspot for probing speed - faster means false triggers and too slow means no triggers. It's a piezo after all. 
+
+After probing a mesh, we have
+
+![Calibration](./image-20200721014523806.png)
+
+And we're good to print!
+
+Also I made a quick webapp thingy to help with conditional gcode, delta calibration, and duet's meta gcode - the escher3d website which calculates points for your calibration procedure is mildly annoying because it 
+
+- Doesn't loop
+
+- Fails if you have one bad probe
+
+- Did I mention that it only runs calibration once?
+
+In any case, here's a link to it: https://deltacal.liria.dev/
+
+Still needs some work but y'know - it generates conditional gcode. I'm happy. 
