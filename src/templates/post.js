@@ -25,10 +25,10 @@ export default function Post({ data, pageContext, location }) {
 
         <article>
           <header>
-            <h1 className="my-0 text-blue-100 lg:text-5xl md:text-4xl text-3xl leading-tight font-black">
+            <h1 className="my-0 text-gray-800 lg:text-5xl md:text-4xl text-3xl leading-tight font-black">
               {post.frontmatter.title}
             </h1>
-            <p className="my-2 md:text-lg text-gray-400">
+            <p className="my-2 md:text-lg text-gray-700">
               {post.frontmatter.description}
             </p>
             <PostData
@@ -37,7 +37,7 @@ export default function Post({ data, pageContext, location }) {
               readingTime={post.fields.readingTime.text}
             />
             {hasTags && (
-              <div className="flex items-center mb-5 text-gray-500">
+              <div className="flex items-center mb-5 text-gray-600">
                 <TagIcon className="mr-3" title="Tags" />
                 <Tags
                   tags={post.frontmatter?.tags ?? []}

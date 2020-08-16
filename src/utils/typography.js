@@ -5,11 +5,11 @@ delete SutroTheme.googleFonts
 
 SutroTheme.overrideThemeStyles = ({ rhythm }, options) => ({
   "p,span,div,time": {
-    color: "rgb(233, 233, 233)",
+    color: "rgb(0,0,0)",
     fontWeight: "400",
   },
   a: {
-    color: "rgb(81, 196, 211)",
+    color: "rgb(0, 0, 0)",
   },
   "h1,h2,h3,h4,h5,h6": {
     marginTop: rhythm(1 / 2),

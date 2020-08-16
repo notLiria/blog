@@ -19,7 +19,7 @@ export default function Layout({ location, children }) {
   const header = (
     <Link
       to="/ "
-      className={`text-gray-200 ${isRoot ? "hover:no-underline" : ""}`}
+      className={`text-black ${isRoot ? "hover:no-underline" : ""}`}
     >
       {isRoot ? (
         <h1
@@ -28,7 +28,7 @@ export default function Layout({ location, children }) {
           {SITE_TITLE}
         </h1>
       ) : (
-        <h1 className="mb-4 flex items-center cursor-pointer font-black md:text-2xl text-xl  text-gray-400">
+        <h1 className="mb-4 flex items-center cursor-pointer font-black md:text-2xl text-xl  text-gray-900">
           <FaHandPointLeft size="30px" className="mr-4 pointer mb-1" />
           {SITE_TITLE}
         </h1>

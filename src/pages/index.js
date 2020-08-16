@@ -34,14 +34,14 @@ const BlogIndex = ({ data, location }) => {
                   <h3 className="mb-1 my-0">
                     <Link
                       to={node.fields.slug}
-                      className="text-2xl text-blue-100 no-underline font-bold"
+                      className="text-2xl text-gray-800 no-underline font-bold"
                     >
                       {title}
                     </Link>
                   </h3>
                 </header>
                 <section>
-                  <p className="m-0 text-gray-400">
+                  <p className="m-0 text-gray-700">
                     {node.frontmatter.description}
                   </p>
                   <Tags tags={node.frontmatter?.tags ?? []} fontClass="text-sm" />

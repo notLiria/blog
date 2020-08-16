@@ -6,7 +6,7 @@ function Technology({ fixed, name }) {
   return (
     <div className="flex items-center my-3">
       <Img fixed={fixed} alt={name} />
-      <p className="ml-3 mb-0 text-sm font-normal text-gray-500">{name}</p>
+      <p className="ml-3 mb-0 text-sm font-normal text-gray-700">{name}</p>
     </div>
   )
 }
@@ -14,7 +14,7 @@ function Technology({ fixed, name }) {
 function Section({ children, title }) {
   return (
     <section className="container mx-auto mb-8">
-      <h3 className="mb-5 font-bold text-gray-400 text-base uppercase">
+      <h3 className="mb-5 font-bold text-gray-800 text-base uppercase">
         {title}
       </h3>
       {children}

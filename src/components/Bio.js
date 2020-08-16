@@ -19,6 +19,12 @@ export default function Bio() {
       twitter: file(absolutePath: { regex: "/twitter.png/" }) {
         ...SocialMedia
       }
+      delta: file(absolutePath: {regex : "/delta.png/"}){
+        ...SocialMedia
+      }
+      bow: file(absolutePath: {regex : "/archery.png/"}){
+        ...SocialMedia
+      }
       avatar: file(absolutePath: { regex: "/avatar.png/" }) {
         data: childImageSharp {
           fixed(width: 50, height: 50) {
@@ -44,7 +50,7 @@ export default function Bio() {
           fixed={data.avatar.data.fixed}
           alt="Profile"
         />
-        <p className="mb-0 lg:text-lg text-gray-400">
+        <p className="mb-0 lg:text-lg text-gray-800">
           Hi, I'm a math student, a 3d printing nerd, and somewhat of a programmer.
         </p>
       </div>
@@ -64,6 +70,29 @@ export default function Bio() {
             />{" "}
             Github
           </ExternalLink>
+          <ExternalLink
+            href={`https://deltacal.liria.dev`}
+            className="flex items-center text-sm"
+          >
+            <Img
+              fixed={data.delta.data.fixed}
+              alt="deltacal"
+              className="mr-3 mb-0 rounded-full"
+            />{" "}
+            Delta Calibrator
+          </ExternalLink>
+          <ExternalLink
+            href={`https://bowcalc.liria.dev`}
+            className="flex items-center text-sm"
+          >
+            <Img
+              fixed={data.bow.data.fixed}
+              alt="bowcalc"
+              className="mr-3 mb-0 rounded-full"
+            />{" "}
+            Bow Calculator
+          </ExternalLink>
+
         </div>
       </div>
     </>
