@@ -1,0 +1,25 @@
+---
+title: Resinjetting
+date: "2020-08-28"
+description: A new 3d printing method?
+tags: 
+   - Resin
+---
+
+So the other day, somebody named Enerology came onto the 3d printing discord and talked about how he'd created his own polyjet printer. That... was a big claim, and I was initially very skeptical - after all, who the fuck makes their own polyjet? There have been a few [attempts](https://news.softpedia.com/news/Man-Invents-Shockingly-Cheap-Polymer-Jetting-3D-Printer-Gallery-458380.shtml), [all of which have gone nowhere](https://reprap.org/forum/read.php?2,556695). So we all thought that DIY polyjetting was a pipe dream.
+
+But then the guy went and continued in his description: He had an 8 nozzle mixer using peristaltic pumps that can do colour, wax supports and clear resins, using a 395nm 500mW laser. Now some of this seemed plausible: Peristaltic pumps for accurate pressure control/dispensing, wax supports, 395nm 500mW laser seems ... not undoable for a diy system. But then the claims became even more audacious: Making your own resin at $15/L. This.. seemed impossible.
+
+Turns out that it's not! `Phenyl bis 2,4,6 trimethylbenzylphosphine oxide + polyester resin.` he said. `Bondo resin` he said. And lo and behold, these chemicals do indeed exist! In fact, if you look up Phenyl bis 2,4,6 trimethylbenzylphosphine oxide, you find a Sigma Aldrich page describing this as a "photoinitiator". So now begins our dive into the world of DIY UV resins!
+
+According to Wikipedia, a photoinitiator is a molecule that creates reactive species when exposed to radiation. That is, it's a chemical used to kickstart the resin curing process... which is interesting, because this seems more and more plausible. Now, not having much of a chemistry background, much of this is just unintelligible to me, so I returned to the Sigma Aldrich page, where lo and behold - on the list of papers involving the usage of this specific photoiniator, there were no fewer than 4 papers about 3d printing that involved this chemical! So there was indeed truth to the words that this man had uttered.
+
+Reading through these papers, it seems that [this](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7015946/) and [this](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5571981/) are the ones of greatest interest to us - the first describing an optical setup of 6 405nm lasers working in concert via a series of mirrors, and a description of the resin as follows:
+
+```The photosensitive resin used in this work was prepared by magnetically stirring at 500 rpm di-pentaerythritol pentaacrylate (SR399; Sartomer, France) with 0.6 mM phenylbis(2,4,6-trimethylbenzoyl)phosphine oxide (97%; Sigma Aldrich, USA) in glass jars heated at 100 °C for 1 h. To remove bubbles trapped in the resin, the vials were also centrifuged at 500 rpm for 30 s prior to use.```
+
+This is good! It's a description of one way to go and make resin - two ingredients, a photoinitiator and a polymer, just like the guy had described - but there's a million other ways, which the second paper goes into a lot more detail about. In fact, all of section 3.1 of the second paper is just a detailed explanation of how to select resin!
+
+In the case of this particular paper, they combine poly(ethylene glycol) diacry-late (PEGDA) with phenylbis(2,4,6-trimethylbenzoyl)phosphine oxide (Irgacure 819) with a variety of different photoabsorbers, whose role it seems is to actually absorb the UV light and stop the reaction - which may be of interest to us later.
+
+In any case, it seems that besides all of this chemistry, the actual mechanism is quite simple - there's a needle hooked up to a peristaltic pump which pumps small amounts of resin out very accurately, with a laser pointed straight down at it. That sounds.. all very doable - so doable in fact that I've ordered everything needed to give this a shot. My plan is to first mix the resin and stick it out in the sun to see if it hardens (Ostensibly 2g of Igracure 819 to 1L of bondo resin). Once that test is done, stick it in a syringe and make a manual Z-stage in which I deposit tiny amounts of resin while hitting it with a laser. We'll see if it works soon enough!
