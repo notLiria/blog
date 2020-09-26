@@ -3,4 +3,4 @@
 // information... though I doubt it
 //export const SITE_NAME = process.env.REACT_APP_SITE_NAME ?? "Liria"
 export const SITE_NAME = `Liria`
-export const SITE_TITLE = `${SITE_NAME}'s collection of ramblings`
+export const SITE_TITLE = `Liria's collection of ramblings`

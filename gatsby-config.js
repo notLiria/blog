@@ -1,12 +1,13 @@
 require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 
-const siteTitle = `${process.env.GATSBY_OWNER}'s collection of ramblings`
+const siteTitle = `Liria's collection of ramblings`
 const themeColor = `#eae6dd`
 module.exports = {
   siteMetadata: {
     title: siteTitle,
     author: {
-      name: process.env.GATSBY_OWNER_FULL_NAME,
+      name: "Liria"
+      //name: process.env.GATSBY_OWNER_FULL_NAME,
     },
     description: "A place for my ramblings.",
     siteUrl: process.env.GATSBY_SITE_URL,
