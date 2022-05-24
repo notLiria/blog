@@ -51,7 +51,7 @@ export default function Bio() {
           alt="Profile"
         />
         <p className="mb-0 lg:text-lg text-gray-800">
-          Hi, I'm a math student, a 3d printing nerd, and somewhat of a programmer.
+          Hi, I'm a ~~math student~~ automation developer, a 3d printing nerd, and a traditional archery lover.
         </p>
       </div>
       <div className="mb-8">
